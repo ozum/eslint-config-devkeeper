@@ -10,7 +10,7 @@
   "scripts": {
     "test": "node test/test.js",
     "preversion": "npm test",
-    "postinstall": "cp .editorconfig .eslintignore $INIT_CWD/ && cp -n module_files/.eslintrc.js $INIT_CWD/",
+    "postinstall": "cpy .editorconfig .eslintignore $INIT_CWD && cpy --no-overwrite module_files/.eslintrc.js $INIT_CWD",
     "release": "git push --follow-tags origin master && git push --tags && npm publish"
   },
   "repository": {
@@ -31,6 +31,7 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^2",
     "@typescript-eslint/parser": "^2",
+    "cpy-cli": "^3.1.1",
     "eslint-config-airbnb-base": "^14",
     "eslint-config-prettier": "^6",
     "eslint-plugin-import": "^2",
