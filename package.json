@@ -11,7 +11,7 @@
   "scripts": {
     "test": "node test/test.js",
     "preversion": "npm test",
-    "postinstall": "cpy .editorconfig .eslintignore $INIT_CWD && cpy --no-overwrite module_files/.eslintrc.js $INIT_CWD",
+    "postinstall": "cpy .editorconfig .eslintignore $INIT_CWD && cpy --no-overwrite module-files/.eslintrc.js $INIT_CWD",
     "release": "git push --follow-tags origin master && git push --tags && npm publish"
   },
   "repository": {
