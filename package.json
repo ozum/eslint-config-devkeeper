@@ -1,0 +1,50 @@
+{
+  "name": "eslint-config-devkeeper",
+  "version": "0.0.1",
+  "description": "ESLint configuration for devkeeper",
+  "main": "index.js",
+  "files": [
+    "/module-files",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/test.js",
+    "preversion": "npm test",
+    "postinstall": "cp .editorconfig .eslintignore $INIT_CWD/ && cp -n module_files/.eslintrc.js $INIT_CWD/",
+    "release": "git push --follow-tags origin master && git push --tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ozum/eslint-config-devkeeper.git"
+  },
+  "keywords": [
+    "eslint",
+    "config",
+    "devkeeper"
+  ],
+  "author": "Özüm Eldoğan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ozum/eslint-config-devkeeper/issues"
+  },
+  "homepage": "https://github.com/ozum/eslint-config-devkeeper#readme",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2",
+    "@typescript-eslint/parser": "^2",
+    "eslint-config-airbnb-base": "^14",
+    "eslint-config-prettier": "^6",
+    "eslint-plugin-import": "^2",
+    "eslint-plugin-jest": "^23",
+    "eslint-plugin-prettier": "^3"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "prettier": "^2.0.5",
+    "typescript": "^3.8.3"
+  },
+  "peerDependencies": {
+    "eslint": ">= 6",
+    "prettier": ">= 2",
+    "typescript": ">= 3"
+  }
+}
