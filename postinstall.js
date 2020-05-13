@@ -38,7 +38,7 @@ async function copyConfigs() {
 }
 
 async function postInstall() {
-  return Promise.all([addScripts, copyConfigs]);
+  return Promise.all([addScripts(), copyConfigs()]);
 }
 
 postInstall()
