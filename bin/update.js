@@ -33,6 +33,7 @@ async function addScripts() {
   if (!packageJson.scripts) packageJson.scripts = {};
   packageJson.scripts.lint = `${getPackageCommand("lint:base")} 'src/**/*.+(js|jsx|ts|tsx|vue)'`;
   packageJson.scripts["lint:base"] = `eslint --cache --max-warnings 0`;
+  packageJson.scripts.format = "prettier --check 'src/**/*.+(json|less|css|md|gql|graphql|html|yaml)' package.json";
 
   await writeJSON(PACKAGE_PATH, packageJson, { spaces: 2 });
 }
