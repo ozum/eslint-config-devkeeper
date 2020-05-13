@@ -6,11 +6,15 @@ ESLint shareable config for devkeeper.
 
 `$ npm install -D eslint-config-devkeeper`
 
-or with peer dependencies
 
 `$ npm install -D eslint prettier typescript eslint-config-devkeeper`
 
-Installation overwrites your `.editorconfig` and `.eslintignore`. Additionally it creates `.eslintrc.json` if it does not exist.
+**Create configuration files and `package.json` scripts:**
+
+_Overwrites your `.editorconfig` and `.eslintignore`. Additionally it creates `.eslintrc.json` if it does not exist._
+
+`$ node_modules/.bin/eslint-config-devkeeper`
+
 
 # Usage
 

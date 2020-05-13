@@ -3,7 +3,11 @@
   "version": "1.0.9",
   "description": "ESLint configuration for devkeeper",
   "main": "index.js",
+  "bin": {
+    "eslint-config-devkeeper": "./bin/update.js"
+  },
   "files": [
+    "/bin",
     "/module-files",
     ".editorconfig",
     ".eslintignore",
@@ -12,7 +16,6 @@
   "scripts": {
     "test": "node test/test.js",
     "preversion": "npm test",
-    "postinstall": "./postinstall.js",
     "release": "git push --follow-tags origin master && npm publish"
   },
   "repository": {
