@@ -6,12 +6,13 @@
   "files": [
     "/module-files",
     ".editorconfig",
-    ".eslintignore"
+    ".eslintignore",
+    "postinstall.js"
   ],
   "scripts": {
     "test": "node test/test.js",
     "preversion": "npm test",
-    "postinstall": "cpy .editorconfig .eslintignore $INIT_CWD && cpy --no-overwrite module-files/.eslintrc.js $INIT_CWD",
+    "postinstall": "postinstall.js",
     "release": "git push --follow-tags origin master && npm publish"
   },
   "repository": {
@@ -32,12 +33,13 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^2",
     "@typescript-eslint/parser": "^2",
-    "cpy-cli": "^3",
     "eslint-config-airbnb-base": "^14",
     "eslint-config-prettier": "^6",
     "eslint-plugin-import": "^2",
     "eslint-plugin-jest": "^23",
-    "eslint-plugin-prettier": "^3"
+    "eslint-plugin-prettier": "^3",
+    "fs-extra": "^9",
+    "pkg-up": "^3"
   },
   "devDependencies": {
     "eslint": "^7.0.0",
@@ -46,7 +48,6 @@
   },
   "peerDependencies": {
     "eslint": ">= 6",
-    "prettier": ">= 2",
-    "typescript": ">= 3"
+    "prettier": ">= 2"
   }
 }

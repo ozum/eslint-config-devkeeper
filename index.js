@@ -42,12 +42,6 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["*.js"],
-      rules: {
-        "@typescript-eslint/no-var-requires": "off", // Allow `const module = require("some-module");`. Otherwise import statements are enforced.
-      },
-    },
-    {
       files: ["*.spec.ts", "*.test.ts"],
       env: {
         jest: true,
