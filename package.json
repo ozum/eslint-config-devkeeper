@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-devkeeper",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "ESLint configuration for devkeeper",
   "main": "index.js",
   "files": [
